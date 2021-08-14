@@ -8,6 +8,7 @@ public class Converter {
 
 	public static void main(String[] args) {
 		
+		Scanner userChoice = new Scanner(System.in); //scanner variable
 		
   // Display for user to choose
 		System.out.println("Please select an option: " +
@@ -15,45 +16,42 @@ public class Converter {
 				"\n2. Miles to Kilometers" +
 				"\n3. US Gallons to Imperial Gallons" +
 				"\n4. Quit");
-		
-		//user input choice
-				Scanner user_menu = new Scanner(System.in);
-				int user_option = user_menu.nextInt();
+	        	//user input choice
+				int userOption = userChoice.nextInt();
 				
-				//user conversation
-				Scanner option = new Scanner(System.in);
-				int option1;
+				//final choice variable
+				int userFinalChoice;
 				
 		//User option to quit
 			int lastMenu = 4;
 			
 		//if user input does not quit, keep displaying menu	
-		while (user_option != lastMenu) {
+		while (userOption != lastMenu) {
 			
 				//what to display base on user input
-				switch (user_option) {
+				switch (userOption) {
 				case 1: 
 					System.out.println("How many cups? ");
 					//ask for user input again
-					option1 = option.nextInt(); 
-					 System.out.println("The conversion from cup to teaspoon is "+option1 *48 + " Teaspoons");
-					 user_option = user_menu.nextInt();
+					userFinalChoice = userChoice.nextInt(); 
+					 System.out.println("The conversion from cup to teaspoon is "+userFinalChoice *48 + " Teaspoons");
+					 userOption = userChoice.nextInt();
 					break;
 					
 				case 2:
 					System.out.println("How many miles? ");
-					option1 = option.nextInt(); 
-					 System.out.println("The conversion from miles to kilometers is "+option1 *1.609 + " kilometers");
+					userFinalChoice =  userChoice.nextInt(); 
+					 System.out.println("The conversion from miles to kilometers is "+userFinalChoice *1.609 + " kilometers");
 				//ask for user input again
-				 user_option = user_menu.nextInt();
+				 userOption = userChoice.nextInt();
 					break;
 
 				case 3:
 					System.out.println("How many Gallons? ");
-					option1 = option.nextInt(); 
-					 System.out.println("The conversion from US Gallons to Imperial is "+option1 /1.201 + " Imperial Gallons");
+					userFinalChoice =  userChoice.nextInt(); 
+					 System.out.println("The conversion from US Gallons to Imperial is "+userFinalChoice /1.201 + " Imperial Gallons");
 				//ask for user input again
-				 user_option = user_menu.nextInt();
+				 userOption = userChoice.nextInt();
 					break;
 
 			default:
@@ -66,18 +64,18 @@ public class Converter {
 						"\n3. US Gallons to Imperial Gallons" +
 						"\n4. Quit");
 				//ask for user input again
-				 user_option = user_menu.nextInt();
+				 userOption = userChoice.nextInt();
 				
 }
 	
 			
 	}
 		//if user input is 4 end Converter
-		if(user_option == lastMenu) {
+		if(userOption == lastMenu) {
 			System.out.println("Thank you for playing");
 		}
-				user_menu.close(); //option scanner closed
-				option.close(); // conversion scanner closed
+				userChoice.close(); //option scanner closed
+				
 		
 		}
 	
