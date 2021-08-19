@@ -1,55 +1,68 @@
 package fixtures;
 
 public class Room extends Fixture {
+
+	Room[] exits = new Room[4];
+	
+	Fixture[] items;
+	public Room(String name, String shortDescription, String longDescription) {
+		super(name, shortDescription, longDescription);
+		
+		
+	}
+	public Room[] getExit(){
+		return exits;
+		
+	}
 	
 	
-	Room north, south, east, west;
-	Room [] connection;
+	public Room getExit(String direction) {
+		
+		int index = 0;
+		
+		direction = direction.toLowerCase().intern();
+		
+		switch(direction) {
+		
+		case "north":
+			index = 0;
+			break;
+		case "south":
+			index = 1;
+			break;
+		case "east":
+				index = 2;
+				break;
+			case "west":
+					index = 3;
+					break;
+		}
+		
+		if(index >=this.exits.length || this.exits[index] ==null) {
+			System.out.println("There is no room left");
+			
+			return this;
+		}
+		
+		return this.exits[index];
+	}
 	
-  public Room (String name, String shortDescription, String longDescription) {
-	  super(longDescription, longDescription, longDescription);
-  }
-
-  
-  
-
-public Room getConnectedRoom(String direction) {
-   if (direction == "north")
-	   return connection[0];
-}
-
-
-
-  public Room moveForward() {
-	  return this.north;
-  }
-  
-  public Room moveBack() {
-	  return this.south;
-  }
-  
-  public Room moveLeft(){
-	  return this.west;
-  }
-  
-  public Room moveRight() {
-	  return.east;
-  }
-  
-  public void setUp(Room up) {
-	  return this.north
-  }
-  
-  public void setDown(Room down) {
-	  return this.south
-  }
-  
-  public void setLeft(Room left) {
-	  return this.west
-  }
-  public void setRight(Room right) {
-	  return this.east
-  }
-   
+	
+	public void setExits(Room [] exits) {
+		this.exits = exits;
+		
+	}
+	
+	public void setExits(Room exit, int index) {
+		this.exits[index] = exit;
+	}
+	
+	public Fixture[] getItems() {
+		return items;
+	}
+ 
+	public void setItems(Fixture... items) {
+		this.items= items;
+	}
 }
 

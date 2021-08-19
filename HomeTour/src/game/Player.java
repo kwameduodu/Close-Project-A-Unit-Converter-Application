@@ -3,15 +3,13 @@ package game;
 import fixtures.Room;
 
 public class Player {
-  Player currentLocation;
+  Room currentRoom;
   
-  public Player getCurrentLocation() {
-	  return this.currentLocation;
-   
-
-	}
+  public Room getCurrentRoom() {
+	  return currentRoom;
+  }
   
-  public void setCurrentLocation (Player locaton) {
-	  currentLocation = location;
+  public void setCurrentRoom(Room currentRoom) {
+	  this.currentRoom = currentRoom;
   }
 }
