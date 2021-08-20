@@ -6,18 +6,18 @@ import fixtures.Room;
 
 public class Main{
 
-	static RoomManager manager = new RoomManager(4);
+	static RoomManager rManager = new RoomManager(4);
 	 static boolean walking = true;
 	public static void main(String[] args) {
 
-		manager.init();
+		rManager.init();
 		
 		Player player = new Player();
 		
 		System.out.println("Hello, Welcome to my house \n Open the door and come on in!" 
 		+"\n let me show you around using North, south, east and west keyword");
 		
-		player.setCurrentRoom(manager.getStartingRoom());
+		player.setCurrentRoom(rManager.getStartingRoom());
 	
 		
 		

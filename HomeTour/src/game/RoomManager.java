@@ -40,9 +40,12 @@ public class RoomManager {
 		outside.setExits(outsideExits);
 		
 
-		bathRoom.setExits(3,livingRoom);
-		kitchen.setExits(2, bathRoom);
-		livingRoom.setExits(1, kitchen);
+		bathRoom.setExits(2,livingRoom);
+		bathRoom.setExits(1,kitchen);
+		kitchen.setExits(0, bathRoom);
+		kitchen.setExits(2, livingRoom);
+		livingRoom.setExits(3, kitchen);
+        livingRoom.setExits(1, outside);
 		outside.setExits(0, livingRoom);
 		 
 		
