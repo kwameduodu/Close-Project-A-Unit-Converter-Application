@@ -2,7 +2,9 @@ package fixtures;
 
 public abstract class Fixture {
 
-	String name, shortDescription, longDescription;
+	public String name;
+	String shortDescription;
+	String longDescription;
 	
 	
 	public Fixture(	String name, String shortDescription, String longDescription) {

@@ -2,6 +2,7 @@ package game;
 
 import fixtures.Room;
 import fixtures.Door;
+import fixtures.Fridge;
 
 public class RoomManager {
 	Room [] rooms;
@@ -28,20 +29,27 @@ public class RoomManager {
 		
 		
 		Room bathRoom = new Room("The bathroom","main bathroom", "The bathroom contain a bathtub and a sink and toilet");
-		this.rooms[1] = livingRoom;
 		this.rooms[3] = bathRoom;
 		
+		
+//		Door dr = new Door("Door", "Maple Dale Front Door","solid wood with durable, double-paned tempered glass,perfect transition from outside to inside your home. ");
+		  
 		this.startingRoom = outside;
 		
-		Room[] outsideExits = { livingRoom, kitchen};
-		
+		Room[] outsideExits = { livingRoom};
 		outside.setExits(outsideExits);
-		livingRoom.setExits(outside, 1);
-		livingRoom.setExits(bathRoom, 0);
-		bathRoom.setExits(outside, 3);
-		kitchen.setExits(outside, 2);
+		
+
+		bathRoom.setExits(3,livingRoom);
+		kitchen.setExits(2, bathRoom);
+		livingRoom.setExits(1, kitchen);
+		outside.setExits(0, livingRoom);
+		 
+		
+	
 		
 		outside.setItems(new Door("Door", "Maple Dale Front Door","solid wood with durable, double-paned tempered glass,perfect transition from outside to inside your home. "));
+		kitchen.setItems(new Fridge("Fridge", "Stainless steel","A big emmpty fridge"));
 	}
 	
 	

@@ -1,7 +1,7 @@
 package game;
 
 import fixtures.Fixture;
-import fixtures.Interactable;
+
 import fixtures.Room;
 
 public class Main{
@@ -40,8 +40,8 @@ public class Main{
 		 
 		 
 	
-	public static void printRoomExits(Player player) {
-		System.out.println("Adjacent Rooms: ");
+	public static void printRoomExits(Player player ) {
+		System.out.print("Adjacent room is ");
 		
 		Room[] connected = player.getCurrentRoom().getExit();
 		
@@ -49,17 +49,16 @@ public class Main{
 		for(int i = 0; i < connected.length; i++) {
 			if (connected[i] != null) {
 				switch (i) {
-				case 0:  System.out.println("North");
+				case 0:  System.out.print("north ");
 					break;
-				case 1: System.out.println("South");
+				case 1: System.out.print("south ");
 					break;
-				case 2: System.out.println("East");
+				case 2: System.out.print("west ");
 					break;
-				case 3: System.out.println("West");
+				case 3: System.out.print("east ");
 					break;
 				}
-				
-				System.out.println(connected[i].getName());
+			System.out.println(connected[i].getName());
 				 
 			}
 		}
@@ -67,14 +66,14 @@ public class Main{
 	
 	public static void printIteractableObjects( Room room) {
 		
-		Fixture[] items = room.getItems();
+		Fixture[] items = room.getItem();
 		
 		if(items != null && items.length > 0) {
 			System.out.println("interactable items: ");
 			for (Fixture i:items) {
-				if(i instanceof Interactable) {
+				
 					System.out.println("\t"+i.getName());
-				}
+				
 			}
 		}
 	}
