@@ -53,6 +53,7 @@ public class RoomManager {
 		
 		outside.setItems(new Door("Door", "Maple Dale Front Door","solid wood with durable, double-paned tempered glass,perfect transition from outside to inside your home. "));
 		kitchen.setItems(new Fridge("Fridge", "Stainless steel","A big emmpty fridge"));
+		kitchen.setItems(new Door("Door", "Maple Dale Front Door","solid wood with durable, double-paned tempered glass,perfect transition from outside to inside your home. "));
 	}
 	
 	
