@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="fixtures.Room"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="game.Player"/>
     <fullyQualifiedTypeName name="fixtures.Fixture"/>
     <fullyQualifiedTypeName name="fixtures.Interactable"/>
     <fullyQualifiedTypeName name="fixtures.Door"/>
     <fullyQualifiedTypeName name="fixtures.Fridge"/>
+    <fullyQualifiedTypeName name="four.Lab.MethodDeclaration"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="io.javalin.Javalin"/>
+    <fullyQualifiedTypeName name="io.javalin.http.Context"/>
+    <fullyQualifiedTypeName name="controllers.TestController"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
